@@ -1,0 +1,11 @@
+
+
+
+
+.carousel-item img{
+  object_fit: cover;
+  object_position:top;
+  height:60vh;
+  overflow:hidden;
+
+}

@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>foodapp!</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    .footer-section {
+      margin-bottom: 20px;
+    }
+    .footer-section h2 {
+      margin-bottom: 10px;
+    }
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 5px;
+    }
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+</style>
+</head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">FOODIEEZ ZONE<i class="fa fa-cart-plus"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{%url 'home'%}"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'register'%}"><i class="fa fa-user"></i>Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'collections'%}"><i class="fa fa-cubes"></i>Items</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <section class="bg-light py-4 my-5">
+       <div class="container">
+         <div class="row">
+
+             <h4 class="mb-3">"In a world full of flavors, choose freshness as your favorite."</h4>
+             <hr style="border-color:#b8bfc2;">
+
+
+               <div class="row">
+
+
+
+<h1>  {{ cat.name }}</h1>
+
+
+ {% for item in pr %}
+
+
+
+               <div class="col-md-3 card my-6">
+                   <div class="row py-lg-5">
+                 <img src="{{item.image}}" class="card-image-top" alt="categories" width="200px" height="200px">
+                       <hr style="...">
+                 <div class="card-body">
+                     <h3 class="card-title text-primary">{{item.category}}</h3>
+                   <h4 class="card-title text-primary"> {{item.name}}</h4>
+                     <h4 class="card-title text-primary">Rs: {{item.price }}</h4>
+                     <h4 class="card-title text-primary">quantity:{{item.quantity}}</h4>
+
+                   <a href="{% url 'collection1' item.pk  %}" class="btn btn-primary btn-sm">Place Order</a>
+                 </div>
+
+                 </div>
+               </div>
+
+
+             {% endfor %}
+               </div>
+         </div>
+       </div>
+    </section>
+
+  <br><br><br><br><br><br><br>
+
+
+    <footer>
+    <div class="footer-section">
+      <h2>About Us</h2>
+      <p>Learn more about our food delivery app and how we bring delicious meals to your doorstep.</p>
+    </div>
+
+
+    <div class="footer-section">
+      <h2>Contact Information</h2>
+      <p>Email: info@fooddeezonee.com</p>
+      <p>Phone: +1-123-456-7890</p>
+    </div>
+    <div class="footer-section">
+      <p>&copy; 2024 Foodee Zone . All rights reserved.</p>
+    </div>
+  <div>
+     <div class="me-5 d-done d-log-block">
+          <span>Get Connected With Us On Social Networks:</span>
+
+          <a href="" class="me-4 text-reset"><i class="fa-brands fa-facebook"></i> </a>
+          <a href="" class="me-4 text-reset"><i class="fa-brands fa-twitter"></i> </a>
+          <a href="" class="me-4 text-reset"><i class="fa-brands fa-instagram"></i> </a>
+          <a href="" class="me-4 text-reset"><i class="fa-brands fa-whatsapp"></i> </a>
+          <a href="" class="me-4 text-reset"><i class="fa-brands fa-google"></i> </a>
+        </div>
+</footer>
+
+</body>
+</html>

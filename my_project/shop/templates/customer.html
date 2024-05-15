@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+              background-color: white;
+
+        }
+        form {
+
+            padding: 70px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: purple;
+            max-width: 500px;
+            margin: 20px auto;
+
+
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header{
+         background-color: orange;
+         text-align:center;
+         color: #fff;
+
+
+         }
+     footer {
+      background-color: orange;
+      color: #fff;
+      padding: 20px;
+    }
+    .footer-section {
+      margin-bottom: 20px;
+    }
+    .footer-section h2 {
+      margin-bottom: 10px;
+    }
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 5px;
+    }
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Foodieez Zonee </h1>
+            <h2 class="mb-3">|"In a world full of flavors, choose freshness as your favorite."|</h2>
+    <h3>Login Page</h3>
+</header>
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+    <button type="submit">submit</button>
+</form>
+<footer>
+    <div class="footer-section">
+      <h2>About Us</h2>
+      <p>Learn more about our food delivery app and how we bring delicious meals to your doorstep.</p>
+    </div>
+
+
+    <div class="footer-section">
+      <h2>Contact Information</h2>
+      <p>Email: info@fooddeezonee.com</p>
+      <p>Phone: +1-123-456-7890</p>
+    </div>
+    <div class="footer-section">
+      <p>&copy; 2024 Foodee Zone . All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

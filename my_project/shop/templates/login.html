@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+              background-color: white;
+
+
+        }
+        form {
+
+            padding: 70px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: purple;
+            max-width: 500px;
+            margin: 20px auto;
+
+
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            color: red;
+            text-decoration: none;
+            text-align: center;
+        }
+        button :hover {
+            text-decoration: underline;
+        }
+
+        header{
+         background-color:orange;
+
+
+         color: #fff;
+
+
+         }
+     footer {
+      background-color: orange;
+      color: #fff;
+      padding: 20px;
+    }
+    .footer-section {
+      margin-bottom: 20px;
+    }
+    .footer-section h2 {
+      margin-bottom: 10px;
+    }
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin-bottom: 5px;
+    }
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+    button.n {
+        background-color: #ccc;
+        border: none;
+        color: red;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 700px;
+        font-size: 16px;
+
+        cursor: pointer;
+        border-radius: 4px;
+    }
+.h {
+    color: purple;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 100px;
+    font-style: italic;
+    margin:left;
+    margin-left: 300px;
+
+}
+ .i {
+    color: green;
+
+
+    font-size: 50px;
+
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+h2{
+    text-align: center;
+         }
+h3{
+    text-align: center;
+         }
+.new{
+     text-align: center;
+         }
+.j {
+  text-transform: uppercase; /* Convert text to uppercase */
+  text-align: center;
+         }
+  .product-section{
+    margin-top: 20px;
+}
+.product-search{
+  width: 80%;
+  border: solid black 2px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+
+}
+.product-search input{
+    border: none;
+    background-color: transparent;
+    width: 100px;
+    display: flex;
+
+}
+.product-search input:focus{
+    outline: none;
+}
+.Products{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.products-box{
+    text-align: center;
+    flex-basis: 20%;
+}
+
+.products-box img{
+        border-radius: 10px;
+             }
+
+
+.a{
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         }
+    </style>
+</head>
+
+<body>
+<header>
+
+
+     <h1> <span class="h">F</span><span class="i">Z</span> <span class="j">Foodieez Zonee</span></h1>
+            <h2 class="mb-3">|"In a world full of flavors, Choose freshness as your favorite."|</h2>
+    <h3>Login Page</h3>
+</header>
+<div class="a">
+    <h1>What Is OnYour Mind?</h1>
+</div>
+<div class="Product-section">
+
+<div class="Products" id="products">
+    <div class="product-box">
+        <img src="https://source.unsplash.com/random/150x150/?Pizza" alt="Pizza">
+        <p>Pizza</p>
+    </div>
+    <div class="products-box">
+        <img src="https://source.unsplash.com/random/150x150/?Burger" alt="Burger">
+        <p>Burger</p>
+    </div>
+    <div class="products-box">
+        <img src="https://source.unsplash.com/random/150x150/?Salads" alt="Salads">
+        <p>Salads</p>
+    </div>
+    <div class="products-box">
+        <img src="https://source.unsplash.com/random/150x150/?Biriyani" alt="Biriyani">
+        <p>Biriyani</p>
+    </div>
+    <div class="products-box">
+        <img src="https://source.unsplash.com/random/150x150/?Sandwich" alt="Sandwich">
+        <p>Sandwich</p>
+    </div>
+
+</div>
+
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">submit</button>
+</form>
+<!--<a href="{% url 'cuso' %}">register</a>-->
+<button  class="n" onclick="window.location.href = '{% url 'cuso' %}'">Register</button><br><br>
+
+<footer>
+    <div class="footer-section">
+      <h2>About Us</h2>
+      <p>Learn more about our food delivery app and how we bring delicious meals to your doorstep.</p>
+    </div>
+
+
+    <div class="footer-section">
+      <h2>Contact Information</h2>
+      <p>Email: info@fooddeezonee.com</p>
+      <p>Phone: +1-123-456-7890</p>
+    </div>
+    <div class="footer-section">
+      <p>&copy; 2024 Foodee Zone . All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
